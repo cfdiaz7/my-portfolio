@@ -10,7 +10,7 @@ const Footer = () => {
             transition={{ duration: 0.8, delay: 1 }}
         >
             <p>&copy; {new Date().getFullYear()} Carlos Fernández. Todos los derechos reservados.</p>
-            <p>Developed with React, Vite y love.</p>
+            <p>Developed with React, Vite and ❤️.</p>
         </motion.footer>
     );
 };

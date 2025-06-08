@@ -1,80 +1,89 @@
 // src/pages/Projects.jsx
 import React from 'react';
-import Section from '../components/Section';
 import { motion } from 'framer-motion';
 
-const projects = [
-    {
-        id: 1,
-        title: 'Sistema de Gestión de Biblioteca',
-        description: 'Una aplicación web full-stack para la gestión de libros, usuarios y préstamos en una biblioteca. Desarrollado como proyecto universitario.',
-        tech: 'Java, Spring Boot, MySQL, Thymeleaf',
-        demoLink: '#', // Reemplaza con un enlace a la demo si tienes
-        repoLink: 'https://github.com/tu-usuario/proyecto-biblioteca' // Reemplaza con tu repo
-    },
-    {
-        id: 2,
-        title: 'Aplicación de Tareas Pendientes (To-Do App)',
-        description: 'Una aplicación interactiva de lista de tareas con funcionalidades de añadir, editar, eliminar y marcar como completado. Demostración de React.',
-        tech: 'React, JavaScript, CSS',
-        demoLink: '#',
-        repoLink: 'https://github.com/tu-usuario/react-todo-app'
-    },
-    {
-        id: 3,
-        title: 'Análisis de Datos con Python',
-        description: 'Un script de Python para el análisis de un dataset específico, extrayendo insights y generando visualizaciones. Proyecto de ciencia de datos.',
-        tech: 'Python, Pandas, Matplotlib, Jupyter Notebook',
-        demoLink: '#',
-        repoLink: 'https://github.com/tu-usuario/analisis-datos-python'
-    },
-    // Puedes añadir más proyectos aquí
-];
-
-const ProjectCard = ({ project }) => (
-    <motion.div
-        className="project-card"
-        whileHover={{ scale: 1.03 }}
-        whileTap={{ scale: 0.98 }}
-        variants={{
-            hidden: { opacity: 0, y: 20 },
-            visible: { opacity: 1, y: 0 }
-        }}
-    >
-        <h3>{project.title}</h3>
-        <p>{project.description}</p>
-        <p><strong>Tecnologías:</strong> {project.tech}</p>
-        {project.demoLink !== '#' && <a href={project.demoLink} target="_blank" rel="noopener noreferrer">Ver Demo</a>}
-        {project.repoLink !== '#' && <a href={project.repoLink} target="_blank" rel="noopener noreferrer" style={{ marginLeft: '15px' }}>Ver Código</a>}
-    </motion.div>
-);
-
-const Projects = () => {
+// Componente individual para cada tarjeta de proyecto
+const ProjectCard = ({ title, description, link, image }) => {
     return (
-        <Section id="proyectos" title="Mis Proyectos">
-            <p>
-                Aquí puedes explorar algunos de los proyectos en los que he trabajado, mostrando mis habilidades y las tecnologías que he utilizado.
-            </p>
-            <motion.div
-                className="project-grid"
-                variants={{
-                    hidden: { opacity: 1 },
-                    visible: {
-                        opacity: 1,
-                        transition: {
-                            staggerChildren: 0.1
-                        }
-                    }
-                }}
-                initial="hidden"
-                whileInView="visible"
-                viewport={{ once: true, amount: 0.2 }}
-            >
-                {projects.map(project => (
-                    <ProjectCard key={project.id} project={project} />
-                ))}
-            </motion.div>
-        </Section>
+        <motion.div
+            className="project-card"
+            initial={{ opacity: 0, y: 50 }} // Animación al aparecer
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, ease: "easeOut" }}
+            whileHover={{ scale: 1.05 }} // Efecto de escala al pasar el ratón
+        >
+            {image && <img src={image} alt={title} className="project-image" />}
+            <h3>{title}</h3>
+            <p>{description}</p>
+            {/* --- CÓDIGO PARA AÑADIR EL BOTÓN DE ENLACE --- */}
+            {link && ( /* Esto renderiza el botón SOLAMENTE si la prop 'link' existe */
+                <a href={link} target="_blank" rel="noopener noreferrer" className="project-link-button">
+                    Ver Proyecto
+                </a>
+            )}
+            {/* --- FIN CÓDIGO PARA AÑADIR EL BOTÓN DE ENLACE --- */}
+        </motion.div>
+    );
+};
+
+// Componente principal de la página de Proyectos
+const Projects = () => {
+    // Datos de ejemplo para tus proyectos. ¡Reemplaza con tus proyectos reales!
+    const projects = [
+        {
+            title: "Proyecto Web de Portafolio",
+            description: "Desarrollo de un portafolio web interactivo utilizando React, Framer Motion y CSS moderno.",
+            link: "https://github.com/tu-usuario/tu-repositorio-portafolio", // <-- ¡IMPORTANTE! Reemplaza con la URL REAL de tu repositorio
+            image: "https://placehold.co/400x250/3498db/ffffff?text=Portafolio" // Imagen de placeholder
+        },
+        {
+            title: "Aplicación de Gestión de Tareas",
+            description: "Creación de una aplicación para organizar tareas diarias con funcionalidades CRUD.",
+            link: "https://github.com/tu-usuario/proyecto-tareas", // <-- Reemplaza con la URL REAL
+            image: "https://placehold.co/400x250/2ecc71/ffffff?text=Tareas+App"
+        },
+        {
+            title: "Sistema de Recomendación",
+            description: "Implementación de un algoritmo de recomendación de películas basado en el historial de usuario.",
+            link: "https://github.com/tu-usuario/proyecto-recomendacion", // <-- Reemplaza con la URL REAL
+            image: "https://placehold.co/400x250/e74c3c/ffffff?text=Recomendacion"
+        },
+        {
+            title: "Juego Simple con JavaScript",
+            description: "Desarrollo de un juego de adivinanzas utilizando HTML, CSS y JavaScript puro.",
+            link: "https://github.com/tu-usuario/proyecto-juego", // <-- Reemplaza con la URL REAL
+            image: "https://placehold.co/400x250/f1c40f/ffffff?text=Juego+JS"
+        }
+    ];
+
+    return (
+        <>
+            {/* El section-content-wrapper limita el ancho de toda la sección de proyectos */}
+            <div className="section-content-wrapper">
+                <motion.h1
+                    initial={{ opacity: 0, y: 20 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 0.8, delay: 0.2 }}
+                >
+                    Mis Proyectos
+                </motion.h1>
+                <motion.p
+                    initial={{ opacity: 0, y: 20 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 0.8, delay: 0.4 }}
+                    style={{ marginBottom: '40px' }}
+                >
+                    Aquí puedes explorar algunos de los proyectos en los que he trabajado.
+                </motion.p>
+
+                {/* Contenedor Grid para las tarjetas de proyecto */}
+                <div className="project-grid">
+                    {projects.map((project, index) => (
+                        <ProjectCard key={index} {...project} />
+                    ))}
+                </div>
+            </div>
+        </>
     );
 };
 

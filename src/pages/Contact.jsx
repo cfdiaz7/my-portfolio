@@ -1,34 +1,66 @@
-// src/pages/Contact.jsx
 import React from 'react';
-import Section from '../components/Section';
+import { motion } from 'framer-motion';
 
 const Contact = () => {
+    const handleSubmit = (e) => {
+        e.preventDefault();
+        alert('Formulario enviado (simulado)');
+    };
+
     return (
-        <Section id="contacto" title="Contáctame">
-            <p>
-                ¿Tienes una pregunta, una propuesta o simplemente quieres saludar? ¡No dudes en contactarme!
-            </p>
-            <form className="contact-form" action="https://formspree.io/f/your-formspree-id" method="POST">
-                {/* Reemplaza 'your-formspree-id' con tu ID de Formspree */}
-                <label htmlFor="name">Name:</label>
-                <input type="text" id="name" name="name" required />
+        <>
+            <div className="section-content-wrapper">
+                <motion.h1
+                    initial={{ opacity: 0, y: 20 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 0.8, delay: 0.2 }}
+                >
+                    Contáctame
+                </motion.h1>
+                <motion.p
+                    initial={{ opacity: 0, y: 20 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 0.8, delay: 0.4 }}
+                    style={{ marginBottom: '40px' }}
+                >
+                    ¿Tienes alguna pregunta, propuesta o simplemente quieres saludar? ¡No dudes en contactarme!
+                </motion.p>
 
-                <label htmlFor="email">Mail:</label>
-                <input type="email" id="email" name="_replyto" required />
+                <motion.form
+                    initial={{ opacity: 0, scale: 0.9 }}
+                    animate={{ opacity: 1, scale: 1 }}
+                    transition={{ duration: 0.8, delay: 0.6 }}
+                    onSubmit={handleSubmit}
+                    className="contact-form"
+                >
+                    <div className="form-group">
+                        <label htmlFor="name">Nombre:</label>
+                        <input type="text" id="name" name="name" required />
+                    </div>
+                    <div className="form-group">
+                        <label htmlFor="email">Email:</label>
+                        <input type="email" id="email" name="email" required />
+                    </div>
+                    <div className="form-group">
+                        <label htmlFor="message">Mensaje:</label>
+                        <textarea id="message" name="message" rows="5" required></textarea>
+                    </div>
+                    <button type="submit" className="submit-button">Enviar Mensaje</button>
+                </motion.form>
 
-                <label htmlFor="message">Message:</label>
-                <textarea id="message" name="message" required></textarea>
-
-                <button type="submit">Send Message</button>
-                <p>
-                    También puedes encontrarme en:
-                    <br />
-                    <a href="https://www.linkedin.com/in/tu-perfil-linkedin" target="_blank" rel="noopener noreferrer">LinkedIn</a> |
-                    <a href="https://github.com/cfdiaz7" target="_blank" rel="noopener noreferrer" style={{ marginLeft: '10px' }}>GitHub</a> |
-                    <a href="mailto:carlos.fdiaz.97@gmail.com" style={{ marginLeft: '10px' }}>tu.email@example.com</a>
-                </p>
-            </form>
-        </Section>
+                <motion.p
+                    initial={{ opacity: 0, y: 20 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 0.8, delay: 0.8 }}
+                    style={{ marginTop: '30px' }}
+                >
+                    También puedes encontrarme en: <br />
+                    <a href="https://www.linkedin.com/in/tu-perfil-linkedin" target="_blank" rel="noopener noreferrer" style={{ color: '#8cafff' }}>LinkedIn</a> |
+                    <a href="https://github.com/tu-usuario-github" target="_blank" rel="noopener noreferrer" style={{ color: '#8cafff', marginLeft: '10px' }}>GitHub</a> |
+                    <span style={{ marginLeft: '10px' }}>carlos.fdiaz.97@gmail.com</span>
+                </motion.p>
+            </div>
+        </>
     );
 };
 

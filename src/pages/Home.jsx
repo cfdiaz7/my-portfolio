@@ -1,13 +1,15 @@
 import React from 'react';
 import { motion } from 'framer-motion';
+import profilePhoto from '../assets/images/avatar.png';
+import cvPdf from '../assets/pdfs/Currículum Vitae CV.pdf';
 
 const Home = () => {
     return (
         <>
             <div className="section-content-wrapper">
             <motion.img
-                src="/avatar.png"
-                alt="Foto de perfil"
+                src={profilePhoto}
+                alt="Carlos Fernández"
                 className="profile-photo"
                 initial={{ opacity: 0, scale: 0.8 }}
                 animate={{ opacity: 1, scale: 1 }}
@@ -32,7 +34,7 @@ const Home = () => {
                 Welcome to my portfolio!
             </motion.p>
             <motion.a
-                href="/Currículum Vitae CV.pdf"
+                href={cvPdf}
                 download
                 target="_blank"
                 rel="noopener noreferrer"

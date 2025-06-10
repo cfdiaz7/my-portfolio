@@ -30,7 +30,7 @@ const Navbar = () => {
         >
             <div className="navbar-container">
                 <NavLink to="/" className="navbar-logo">
-                    Carlos
+                    <img src="/logo-personal.png" alt="Logo" className="logo-image"/>
                 </NavLink>
                 <ul className="navbar-nav">
                     <li><NavLink to="/" className={({ isActive }) => isActive ? 'active' : ''}>Home</NavLink></li>

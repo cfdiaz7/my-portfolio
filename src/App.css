@@ -1,5 +1,5 @@
 :root {
-  --navbar-height: 45px;
+  --navbar-height: 60px;
   --primary-color: #e22b3a;
   --secondary-color: #3264b1;
   --text-color: #f0f0f0;
@@ -9,6 +9,25 @@
   --gradient-text-start: var(--primary-color);
   --gradient-text-end: #3264b1;
 
+}
+
+@font-face {
+  font-family: 'Gotham';
+  src: url('./assets/Gotham-Book.woff2') format('woff2'),
+  url('./assets/Gotham-Book.woff') format('woff');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* Gotham Bold */
+@font-face {
+  font-family: 'Gotham';
+  src: url('./assets/Gotham-Bold.woff2') format('woff2'),
+  url('./assets/Gotham-Bold.woff') format('woff');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
 }
 
 html, body {
@@ -27,7 +46,7 @@ html, body {
   background-color: #1a1a1a;
 
   color: var(--text-color);
-  font-family: 'Arial', sans-serif;
+  font-family: 'Gotham', sans-serif;
   line-height: 1.6;
 }
 
@@ -79,12 +98,18 @@ main {
 }
 
 .navbar-logo {
-  font-size: 1.5em;
-  font-weight: bold;
-  color: var(--text-color);
+  display: flex;
+  align-items: center;
+  height: var(--navbar-height);
   text-decoration: none;
 }
 
+.navbar-logo .logo-image {
+  height: calc(var(--navbar-height) - 20px);
+  width: auto;
+  object-fit: contain;
+  vertical-align: middle;
+}
 .navbar-nav {
   list-style: none;
   margin: 0;
@@ -197,10 +222,10 @@ main {
   border-radius: 50%;
   object-fit: cover;
   margin-bottom: 20px;
-  border: 4px solid var(--text-color);
+  border: 4px solid white;
 }
 
-.download-cv-button {
+.download-cv-button, .contact-form .submit-button, .project-card .project-link-button{
   background-color: rgba(0, 0, 0, 0.3);
   color: var(--text-color);
   padding: 12px 25px;
@@ -212,7 +237,7 @@ main {
   transition: transform 0.3s ease, background-color 0.3s ease, border-color 0.3s ease;
 }
 
-.download-cv-button:hover {
+.download-cv-button:hover, .contact-form .submit-button:hover, .project-card .project-link-button:hover {
   color: var(--text-color);
   transform: scale(1.05);
   background-color: rgba(0, 0, 0, 0.8);
@@ -271,25 +296,6 @@ main {
 
 .contact-form textarea {
   resize: vertical;
-}
-
-.contact-form .submit-button {
-  background-color: rgba(0, 0, 0, 0.3);
-  color: white;
-  padding: 12px 25px;
-  border: 2px solid var(--primary-color);
-  border-radius: 5px;
-  cursor: pointer;
-  font-size: 1.1em;
-  margin-top: 10px;
-  transition: transform 0.3s ease, background-color 0.3s ease, border-color 0.3s ease;
-}
-
-.contact-form .submit-button:hover {
-  transform: scale(1.05);
-  background-color: rgba(0, 0, 0, 0.8);
-  border-color: var(--secondary-color);
-  color: var(--text-color);
 }
 
 .footer {
@@ -353,26 +359,6 @@ main {
   flex-grow: 1;
 }
 
-.project-card .project-link-button {
-  background-color: rgba(0, 0, 0, 0.3);
-  color: white;
-  padding: 12px 25px;
-  border: 2px solid var(--primary-color);
-  border-radius: 5px;
-  cursor: pointer;
-  font-size: 1.1em;
-  margin-top: 10px;
-  transition: transform 0.3s ease, background-color 0.3s ease, border-color 0.3s ease;
-}
-
-.project-card .project-link-button:hover {
-  transform: scale(1.05);
-  background-color: rgba(0, 0, 0, 0.8);
-  border-color: var(--secondary-color);
-  color: var(--text-color);
-}
-
-/* Responsive adjustments */
 @media (max-width: 768px) {
   .navbar-container {
     padding: 0 15px;
@@ -406,11 +392,63 @@ main {
   font-size: 3.5em;
   font-weight: bold;
   margin-bottom: 20px;
-}
 
+}
 
 @media (max-width: 768px) {
   .gradient-heading {
     font-size: 2.5em;
+  }
+}
+
+.social-icons-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 25px;
+  margin-top: 30px;
+  padding: 10px 0;
+
+}
+
+.social-icon-link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background-color: rgba(255, 255, 255, 0.1);
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.social-icon-link:hover {
+  background-color: var(--primary-color);
+  transform: translateY(-5px);
+}
+
+.social-icon {
+  width: 28px;
+  height: 28px;
+  color: var(--text-color);
+  transition: color 0.3s ease;
+}
+
+.social-icon-link:hover .social-icon {
+  color: white;
+}
+
+
+@media (max-width: 768px) {
+  .social-icons-container {
+    gap: 15px;
+  }
+  .social-icon-link {
+    width: 45px;
+    height: 45px;
+  }
+  .social-icon {
+    width: 24px;
+    height: 24px;
   }
 }

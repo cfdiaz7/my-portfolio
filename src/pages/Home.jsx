@@ -26,9 +26,10 @@ const Home = () => {
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, delay: 0.7 }}
             >
-                "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-                quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-                cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+                Currently in my final part of my studies at UPM in Information Systems.
+                I am passionate about connecting technology with people through smart and functional solutions.
+                This is my personal space where I share my projects, skills and ways of contact.
+                Welcome to my portfolio!
             </motion.p>
             <motion.a
                 href="/Currículum Vitae CV.pdf"

@@ -13,20 +13,20 @@ const About = () => {
                 About Me
             </motion.h1>
             <motion.p>
-                Soy un apasionado estudiante de Sistemas de Información en la Universidad Politécnica de Madrid (UPM) con interés en IA, ingenieria de datos y gestion de proyectos y servicios IT.
-                Mi objetivo es construir soluciones eficientes y escalables que resuelvan problemas del mundo real.
+                I am a passionate student of Information Systems at the Polytechnic University of Madrid (UPM) with interest in AI, data engineering and project management and IT services.
+                My goal is to build efficient and scalable solutions that solve real-world problems.
             </motion.p>
             <motion.p>
-                Durante mi formación, he adquirido conocimientos en diversas áreas como programación (JavaScript, Python, Java, C), bases de datos (SQL, NoSQL), redes, metodologías ágiles (SCRUM, Kanban) y tradicionales.
-                Me encanta aprender nuevas tecnologías y enfrentar desafíos que me permitan crecer profesionalmente.
+                I have acquired knowledge in various areas such as programming, databases, networks, agile methodologies.
+                I love learning new technologies and facing challenges that allow me to grow professionally.
             </motion.p>
-            <motion.h3>Mis Habilidades</motion.h3>
+            <motion.h3>My Skills</motion.h3>
             <motion.ul>
-                <motion.li>**Lenguajes:** JavaScript (ES6+), Python, Java, SQL, HTML, CSS</motion.li>
-                <motion.li>**Frameworks/Librerías:** React, Node.js (básico), Express.js (básico)</motion.li>
-                <motion.li>**Bases de Datos:** MySQL, PostgreSQL, MongoDB</motion.li>
-                <motion.li>**Herramientas:** Git, GitHub, Docker (básico), Figma (básico)</motion.li>
-                <motion.li>**Conceptos:** Paradigmas de Programación (OOP, Funcional), Estructuras de Datos, Algoritmos, Patrones de Diseño, Desarrollo Ágil (Scrum)</motion.li>
+                Languages:JavaScript (ES6+), Python, Java, SQL, HTML, CSS<br/>
+                Frameworks: React y Vite<br/>
+                Databases: MySQL, PostgreSQL, MongoDB<br/>
+                Tools: GitHub, Docker , Jira<br/>
+                Concepts: Programming Paradigms, Data Structures, Algorithms, Design Patterns, Agile Development, IT Service Management Frameworks
             </motion.ul>
             </div>
         </>

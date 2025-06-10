@@ -1,6 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import portfolio from '../assets/images/Portfolio-project.jpg';
+import projectImage1 from '../assets/images/Portfolio-project.jpg';
 
 const ProjectCard = ({ title, description, link, image }) => {
     return (
@@ -30,7 +30,7 @@ const Projects = () => {
             title: "Web Portfolio",
             description: "Developing of a web portfolio using React and Vite.",
             link: "https://github.com/cfdiaz7/my-portfolio",
-            image: {portfolio}
+            image: projectImage1
         },
     ];
 

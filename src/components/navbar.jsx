@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import {NavLink, useLocation} from 'react-router-dom';
 import { motion } from "framer-motion";
+import logo from '../assets/images/logo-personal.png';
 
 const Navbar = () => {
     const [isTransparent, setIsTransparent] = useState(false);
@@ -30,7 +31,7 @@ const Navbar = () => {
         >
             <div className="navbar-container">
                 <NavLink to="/" className="navbar-logo">
-                    <img src="/src/assets/images/logo-personal.png" alt="Logo" className="logo-image"/>
+                    <img src={logo} alt="Logo" className="logo-image"/>
                 </NavLink>
                 <ul className="navbar-nav">
                     <li><NavLink to="/" className={({ isActive }) => isActive ? 'active' : ''}>Home</NavLink></li>

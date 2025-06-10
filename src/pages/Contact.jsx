@@ -48,7 +48,7 @@ const Contact = () => {
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.8, delay: 0.8 }}
                 >
-                    <a href="https://www.linkedin.com/in/tu-perfil-linkedin" target="_blank" rel="noopener noreferrer" className="social-icon-link">
+                    <a href="https://www.linkedin.com/in/carlos-fern%C3%A1ndez-d%C3%ADaz-263329202/" target="_blank" rel="noopener noreferrer" className="social-icon-link">
                         <svg className="social-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
                             <path d="M20.447 20.452h-3.554v-5.564c0-1.328-.027-3.044-1.852-3.044-1.853 0-2.136 1.445-2.136 2.934v5.674H9.351V9.281h3.413v1.564h.045c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.733a2.481 2.481 0 01-2.493-2.492c0-1.393 1.11-2.502 2.493-2.502s2.481 1.109 2.492 2.502A2.481 2.481 0 015.337 7.733zm3.504 12.719H1.833V9.281h3.504v11.171z" />
                         </svg>

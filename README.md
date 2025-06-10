@@ -45,33 +45,33 @@ This project has been built using the following key technologies:
 
 The project follows a standard React application structure, organized for clarity and scalability:
 
-my-portfolio/
-├── public/                 # Static assets (favicons, background image)
-├── src/                    # All React source code
-│   ├── assets/             # Images, PDFs, and fonts imported by components
-│   │   ├── images/         # Profile photo, Navbar logo, project images
-│   │   └── pdfs/           # CV PDF
-│   ├── components/         # Reusable React components (Navbar, Footer, LoadingPage, ProjectCard, etc.)
-│   │   ├── Navbar.jsx
-│   │   ├── Footer.jsx
-│   │   ├── MainContentScroller.jsx
-│   │   └── ScrollToTop.jsx
-│   ├── pages/              # Main page components (Home, About, Projects, Contact)
-│   │   ├── Home.jsx
-│   │   ├── About.jsx
-│   │   ├── Projects.jsx
-│   │   └── Contact.jsx
-│   ├── App.css             # Main stylesheet for global styles and component-specific styles
-│   ├── App.jsx             # Main application component, sets up routing
-│   ├── index.css           # Basic CSS reset and global styles
-│   └── main.jsx            # Entry point for the React application
-├── .eslint.config.js           # ESLint configuration
-├── .gitignore              # Files/folders to be ignored by Git
-├── package.json            # Project dependencies and scripts
-├── package-lock.json
-├──index.html
-├── vite.config.js          # Vite build tool configuration
-└── README.md               # This README file
+    my-portfolio/
+    ├── public/                 # Static assets (favicons, background image)
+    ├── src/                    # All React source code
+    │   ├── assets/             # Images, PDFs, and fonts imported by components
+    │   │   ├── images/         # Profile photo, Navbar logo, project images
+    │   │   └── pdfs/           # CV PDF
+    │   ├── components/         # Reusable React components (Navbar, Footer, LoadingPage, ProjectCard, etc.)
+    │   │   ├── Navbar.jsx
+    │   │   ├── Footer.jsx
+    │   │   ├── MainContentScroller.jsx
+    │   │   └── ScrollToTop.jsx
+    │   ├── pages/              # Main page components (Home, About, Projects, Contact)
+    │   │   ├── Home.jsx
+    │   │   ├── About.jsx
+    │   │   ├── Projects.jsx
+    │   │   └── Contact.jsx
+    │   ├── App.css             # Main stylesheet for global styles and component-specific styles
+    │   ├── App.jsx             # Main application component, sets up routing
+    │   ├── index.css           # Basic CSS reset and global styles
+    │   └── main.jsx            # Entry point for the React application
+    ├── .eslint.config.js           # ESLint configuration
+    ├── .gitignore              # Files/folders to be ignored by Git
+    ├── package.json            # Project dependencies and scripts
+    ├── package-lock.json
+    ├──index.html
+    ├── vite.config.js          # Vite build tool configuration
+    └── README.md               # This README file
 
 📦 Local Setup and Execution
 

@@ -34,7 +34,7 @@ const Projects = () => {
         },
         {
             title: "NLP Project",
-            description: "Developing of a web portfolio using React and Vite.",
+            description: "Final degree project",
             link: "https://github.com/cfdiaz7/TFG_Modelo_NLP",
             image: null
         },

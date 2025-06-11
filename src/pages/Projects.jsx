@@ -32,6 +32,12 @@ const Projects = () => {
             link: "https://github.com/cfdiaz7/my-portfolio",
             image: projectImage1
         },
+        {
+            title: "NLP Project",
+            description: "Developing of a web portfolio using React and Vite.",
+            link: "https://github.com/cfdiaz7/TFG_Modelo_NLP",
+            image: null
+        },
     ];
 
     return (

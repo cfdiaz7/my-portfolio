@@ -22,7 +22,7 @@ const About = () => {
             </motion.p>
             <motion.h3>My Skills</motion.h3>
             <motion.ul>
-                Languages:JavaScript (ES6+), Python, Java, SQL, HTML, CSS<br/>
+                Languages:JavaScript, Python, Java, SQL, HTML, CSS<br/>
                 Frameworks: React y Vite<br/>
                 Databases: MySQL, PostgreSQL, MongoDB<br/>
                 Tools: GitHub, Docker , Jira<br/>
